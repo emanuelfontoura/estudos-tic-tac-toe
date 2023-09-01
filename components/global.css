@@ -14,10 +14,6 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.section-title{
-    margin-bottom: 30px;
-}
-
 .section-title__titleh1{
     font-size: 3rem;
     text-align: center;
@@ -31,6 +27,14 @@ body{
     font-weight: 400;
     color: #592C28;
     letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.section-result{
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    color: crimson;
+    letter-spacing: 2px;
 }
 
 .section-table{
