@@ -31,14 +31,12 @@ export default function initPlay(){
 
     function divHandleClick(e, index){
         if(count % 2 == 0 && !isSelected(index)){
-            playTurn.innerText = 'Jogando: X'
             e.currentTarget.innerText = 'X'
             currentSelectionX.push(index)
             verifyWin(currentSelectionX, e.currentTarget.innerText)
             count++
             console.log(count)
         }else if(count % 2 != 0 && !isSelected(index)){
-            playTurn.innerText = 'Jogando: O'
             e.currentTarget.innerText = 'O'
             currentSelectionO.push(index)
             verifyWin(currentSelectionO, e.currentTarget.innerText)
@@ -50,9 +48,9 @@ export default function initPlay(){
 
     function nextTurn(index){
         verifyDraw()
-        if((count+1) % 2 == 0){
+        if(currentSelectionO.includes(index)){
             playTurn.innerText = 'Jogando: X'
-        }else if ((count+1) % 2 != 0){
+        }else if (currentSelectionX.includes(index)){
             playTurn.innerText = 'Jogando: O'
         } 
     }
